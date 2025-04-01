@@ -1,2 +1,13 @@
 repositories:
-    
+    mowbot_legacy_sdk:
+        type: git
+        url: https://github.com/serene4uto/mowbot_legacy_sdk
+        version: main
+    mowbot_legacy_launch:
+        type: git
+        url: https://github.com/serene4uto/mowbot_legacy_launch.git
+        version: main
+    mowbot_legacy_ext:
+        type: git
+        url: https://github.com/serene4uto/mowbot_legacy_ext.git
+        version: main

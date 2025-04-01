@@ -82,10 +82,10 @@ clone_repositories() {
     cd "$WORKSPACE_ROOT"
     if [ ! -d "src" ]; then
         mkdir -p src
-        vcs import --recursive src <mowbot_legacy.repos
+        vcs import --recursive src < mowbot_legacy.repos
     else
         echo "Source directory already exists. Updating repositories..."
-        vcs import --recursive src <mowbot_legacy.repos
+        vcs import --recursive src < mowbot_legacy.repos
         vcs pull src
     fi
 }
