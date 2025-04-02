@@ -1,6 +1,6 @@
 {
     "name": "mowbot_legacy",
-    "image": "ros:humble-ros-base-jammy",
+    "image": "ghcr.io/serene4uto/mowbot-legacy-base",
     "runArgs": [
         "--name", "mowbot_legacy",
         "--net", "host",

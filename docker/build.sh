@@ -103,6 +103,17 @@ build_images() {
     echo "Lib dir: $lib_dir"
     echo "Target: $target"
 
+    set -x
+    docker buildx bake --load --progress=plain -f "$SCRIPT_DIR/docker-bake.hcl" \
+        --set "*.context=$WORKSPACE_ROOT" \
+        --set "*.ssh=default" \
+        --set "*.platform=$platform" \
+        --set "*.args.ROS_DISTRO=$rosdistro" \
+        --set "*.args.BASE_IMAGE=$base_image" \
+        --set "*.args.SETUP_ARGS=$setup_args" \
+        --set "*.args.LIB_DIR=$lib_dir" \
+        --set "base.tags=ghcr.io/serene4uto/mowbot-legacy-base:latest"
+    set +x
 }
 
 
@@ -118,5 +129,5 @@ set_platform
 set_arch_lib_dir
 load_env
 clone_repositories
-# build_images
-# remove_dangling_images
+build_images
+remove_dangling_images
