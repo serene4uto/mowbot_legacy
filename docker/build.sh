@@ -77,6 +77,22 @@ load_env() {
 }
 
 
+#install some necessary apt packages
+install_apt_packages() {
+    sudo apt-get update
+    sudo apt-get install -y \
+        curl \
+        git \
+        docker-buildx
+
+    curl -s https://packagecloud.io/install/repositories/dirk-thomas/vcstool/script.deb.sh | sudo bash
+    sudo apt-get update
+    sudo apt-get install -y \
+        python3-vcstool
+}
+
+
+
 # Clone repositories
 clone_repositories() {
     cd "$WORKSPACE_ROOT"
@@ -128,6 +144,7 @@ parse_arguments "$@"
 set_platform
 set_arch_lib_dir
 load_env
+install_apt_packages
 clone_repositories
 build_images
 remove_dangling_images
