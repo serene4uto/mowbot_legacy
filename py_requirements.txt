@@ -4,5 +4,5 @@ pyproj
 pytz
 scipy
 
-tk
+# tk
 pydantic
