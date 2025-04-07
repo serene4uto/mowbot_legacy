@@ -4,5 +4,6 @@ pyproj
 pytz
 scipy
 
-# tk
 pydantic
+
+pyserial
