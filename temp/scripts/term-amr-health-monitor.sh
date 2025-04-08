@@ -4,7 +4,7 @@
 CONTAINER_NAME="mowbot_legacy"
 
 # Get the PID of the ROS2 launch command inside the Docker container
-ROS2_LAUNCH_PID=$(docker exec "$CONTAINER_NAME" pgrep -f "ros2 run py_mowbot_utils system_monitor")
+ROS2_LAUNCH_PID=$(docker exec "$CONTAINER_NAME" pgrep -f "ros2 run py_mowbot_utils system_monitor_2")
 
 if [ -z "$ROS2_LAUNCH_PID" ]; then
     echo "No ROS2 launch process found in container $CONTAINER_NAME."

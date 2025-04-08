@@ -1,17 +1,14 @@
-# Mowbot Base
-# SUBSYSTEM=="tty", KERNEL=="ttyUSB*", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", ATTRS{devpath}=="2.2.1", MODE="0666", SYMLINK+="MBB-ESP"
-
 
 # IMUs
-SUBSYSTEM=="tty", KERNEL=="ttyUSB*", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", ATTRS{devpath}=="2.1.3", MODE="0666", SYMLINK+="HWT905"
+SUBSYSTEM=="tty", KERNEL=="ttyUSB*", ATTRS{devpath}=="2.1.3", MODE="0666", SYMLINK+="HWT905"
 
 
 # GPSs
-SUBSYSTEM=="tty", KERNEL=="ttyUSB*", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", ATTRS{devpath}=="2.2.1", MODE="0666", SYMLINK+="UM982"
-SUBSYSTEM=="tty", KERNEL=="ttyUSB*", ATTRS{idVendor}=="067b", ATTRS{idProduct}=="2303", ATTRS{devpath}=="2.2.4", MODE="0666", SYMLINK+="UM982-RTCM"
+SUBSYSTEM=="tty", KERNEL=="ttyUSB*", ATTRS{devpath}=="2.2.1", MODE="0666", SYMLINK+="UM982"
+SUBSYSTEM=="tty", KERNEL=="ttyUSB*", ATTRS{devpath}=="2.2.4", MODE="0666", SYMLINK+="UM982-RTCM"
 
-# SUBSYSTEM=="tty", KERNEL=="ttyACM*", ATTRS{idVendor}=="1546", ATTRS{idProduct}=="01a9", ATTRS{devpath}=="2.2.1", MODE="0666", SYMLINK+="UBLOX-GNSS-L"
-# SUBSYSTEM=="tty", KERNEL=="ttyACM*", ATTRS{idVendor}=="1546", ATTRS{idProduct}=="01a9", ATTRS{devpath}=="2.2.4", MODE="0666", SYMLINK+="UBLOX-GNSS-R"
+# SUBSYSTEM=="tty", KERNEL=="ttyACM*", ATTRS{devpath}=="2.2.1", MODE="0666", SYMLINK+="UBLOX-GNSS-L"
+# SUBSYSTEM=="tty", KERNEL=="ttyACM*", ATTRS{devpath}=="2.2.4", MODE="0666", SYMLINK+="UBLOX-GNSS-R"
 
 # Lasers
-# SUBSYSTEM=="tty", KERNEL=="ttyUSB*", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", ATTRS{serial}=="da344e8fdc89ec11a36cc071d76262f7", MODE="0666", SYMLINK+="RPLIDAR-C2"
+SUBSYSTEM=="tty", KERNEL=="ttyUSB*", MODE="0666", SYMLINK+="RPLIDAR-C2"
