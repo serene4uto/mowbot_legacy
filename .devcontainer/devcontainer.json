@@ -1,12 +1,13 @@
 {
-    "name": "mowbot_legacy",
+    "name": "mowbot_legacy_dev",
     "image": "ghcr.io/serene4uto/mowbot-legacy-base",
     "runArgs": [
-        "--name", "mowbot_legacy",
+        "--name", "mowbot_legacy_dev",
         "--net", "host",
         "--privileged",
         "-v", "/dev:/dev",
         "-v", "/tmp/.X11-unix:/tmp/.X11-unix",
+        "-v", "/home/mowbot/mowbot_legacy_data:/mowbot_legacy/data",
         "-e", "DISPLAY"
     ],
     "customizations": {
