@@ -25,7 +25,7 @@ else
     # Source ROS2
     # hadolint ignore=SC1090
     source "/opt/ros/$ROS_DISTRO/setup.bash"
-    # source /opt/mowbot_legacy/setup.bash
+    source /opt/mowbot_legacy/setup.bash
 
     # Execute the command as the user
     exec /usr/sbin/gosu "$USER_NAME" "$@"

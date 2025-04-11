@@ -116,7 +116,7 @@ build_images() {
     echo "ROS distro: $rosdistro"
     echo "Base image: $base_image"
     echo "Setup args: $setup_args"
-    echo "Lib dir: $lib_dir"
+    echo "Lib dir: $lib_dir" 
     echo "Target: $target"
 
     set -x
@@ -145,6 +145,6 @@ set_platform
 set_arch_lib_dir
 load_env
 install_apt_packages
-# clone_repositories
+clone_repositories
 build_images
 remove_dangling_images
