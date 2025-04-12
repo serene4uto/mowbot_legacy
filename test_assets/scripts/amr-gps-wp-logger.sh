@@ -11,11 +11,11 @@ docker run --rm -it \
     --network host \
     -e DISPLAY=:0.0 \
     -w /mowbot_legacy \
-    -v "$HOME_DIR/mowbot_legacy_data:/mowbot_legacy/data" \
+    -v "$HOME_DIR/mowbot_legacy_data:/mowbot_legacy_data" \
     -v "/dev:/dev" \
     -v "/tmp/.X11-unix:/tmp/.X11-unix" \
     ghcr.io/serene4uto/mowbot-legacy-base /bin/bash -c "\
-        cd /workspaces/mowbot_legacy \
+        cd /mowbot_legacy \
         && . ./install/setup.bash \
         && ros2 launch mowbot_legacy_launch gps_waypoints_logger.launch.py \
             rl:=true \

@@ -17,6 +17,6 @@ bash "$SCRIPT_DIR/docker/build.sh"
 mkdir -p "$HOME_DIR/mowbot_legacy_data"
 
 # remove src
-rm -rf "$SCRIPT_DIR/src"
+# rm -rf "$SCRIPT_DIR/src"
 
 

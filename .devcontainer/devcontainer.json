@@ -7,7 +7,7 @@
         "--privileged",
         "-v", "/dev:/dev",
         "-v", "/tmp/.X11-unix:/tmp/.X11-unix",
-        "-v", "/home/mowbot/mowbot_legacy_data:/mowbot_legacy/data",
+        "-v", "/home/mowbot/mowbot_legacy_data:/mowbot_legacy_data",
         "-e", "DISPLAY"
     ],
     "customizations": {
