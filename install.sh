@@ -13,8 +13,8 @@ ssh-add "$HOME_DIR/.ssh/id_rsa"
 # first, build or pull the docker image
 bash "$SCRIPT_DIR/docker/build.sh"
 
-# create common data directory at $HOME_DIR
-mkdir -p "$HOME_DIR/mowbot_legacy_data"
+# copy common data directory to $HOME_DIR
+copy -r "$SCRIPT_DIR/mowbot_legacy_data" "$HOME_DIR/"
 
 # remove src
 # rm -rf "$SCRIPT_DIR/src"
