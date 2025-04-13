@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=*
+Icon=/home//mowbot_legacy/test_assets/resources/mowbot_app_icon.jpg
+Exec=bash -c 'python3 "/home//mowbot_legacy/test_assets/py_scripts/*.py"; exec bash'
+Terminal=false

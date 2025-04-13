@@ -7,7 +7,7 @@ export DISPLAY=:0
 xhost +local:docker
 
 docker run --rm -it \
-    --name mowbot_legacy_gps_wp_logger \
+    --name test_wp_set \
     --network host \
     -e DISPLAY=:0.0 \
     -w /mowbot_legacy \
@@ -17,6 +17,7 @@ docker run --rm -it \
     ghcr.io/serene4uto/mowbot-legacy-base /bin/bash -c "\
         cd /mowbot_legacy \
         && . ./install/setup.bash \
-        && ros2 launch mowbot_legacy_launch gps_waypoints_logger.launch.py \
-            rl:=true \
+        && ros2 launch mowbot_legacy_launch test_wp_set.launch.py \
+            mapviz:=true \
+            rl:=false \
     "

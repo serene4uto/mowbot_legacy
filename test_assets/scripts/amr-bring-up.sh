@@ -7,7 +7,7 @@ export DISPLAY=:0
 xhost +local:docker
 
 docker run --rm -it \
-    --name mowbot_legacy_bring_up \
+    --name test_wp_bringup \
     --network host \
     -e DISPLAY=:0.0 \
     -w /mowbot_legacy \
@@ -17,10 +17,11 @@ docker run --rm -it \
     ghcr.io/serene4uto/mowbot-legacy-base  /bin/bash -c "\
         cd /mowbot_legacy \
         && . ./install/setup.bash \
-        && ros2 launch mowbot_legacy_launch bringup.launch.py \
+        && ros2 launch test_wp_bringup bringup.launch.py \
             uros:=true foxglove:=true \
             imu:=true madgwick:=true \
             ntrip:=true gps:=true \
             laser:=true \
             sensormon:=true \
+            rl:=true \
     "
