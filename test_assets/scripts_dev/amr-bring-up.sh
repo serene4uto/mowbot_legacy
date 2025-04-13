@@ -1,6 +1,6 @@
 export DISPLAY=:0
 xhost +local:docker
-docker start mowbot_legacy
+docker start mowbot_legacy_dev
 docker exec -it -e DISPLAY=:0.0 -w /workspaces/mowbot_legacy mowbot_legacy_dev /bin/bash -c "\
         cd /workspaces/mowbot_legacy \
         && . ./install/setup.bash \
@@ -9,5 +9,5 @@ docker exec -it -e DISPLAY=:0.0 -w /workspaces/mowbot_legacy mowbot_legacy_dev /
             imu:=true madgwick:=true \
             ntrip:=true gps:=true \
             laser:=true \
-            rl:=true \
+            rl:=false \
     "
