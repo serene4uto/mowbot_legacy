@@ -14,7 +14,7 @@ ssh-add "$HOME_DIR/.ssh/id_rsa"
 bash "$SCRIPT_DIR/docker/build.sh"
 
 # copy common data directory to $HOME_DIR
-# cp -r "$SCRIPT_DIR/mowbot_legacy_data" "$HOME_DIR/"
+cp -r "$SCRIPT_DIR/mowbot_legacy_data" "$HOME_DIR/"
 
 # remove src
 # rm -rf "$SCRIPT_DIR/src"
